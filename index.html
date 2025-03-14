@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Blog App</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body class="m-0 bg-secondary" >
+
+<div style="
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 0.4rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4rem;
+        background-color: white;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3)"
+    >CRUD Blog App</div>
+
+<div class="container bg-white p-4 mt-5">
+    <div class="fs-4 mt-5 mx-2">Create new post</div>
+    <form id="post-form">
+        <input type="text" id="title" placeholder="Title" class="form-control bg-light mb-3" required>
+        <textarea id="text" placeholder="Text" class="form-control bg-light mb-3" required></textarea>
+        <button type="submit" style="font-size: 0.9rem; width: 5rem" class="btn btn-secondary">Publish</button>
+    </form>
+
+    <div class="fs-4 mt-5 mx-2">Find post by title</div>
+    <input type="text" id="find-post" placeholder="Enter the title of the post you are looking for" class="form-control bg-light" required>
+
+    <div class="fs-4 mt-5 mx-2">List of all posts</div>
+    <div id="posts-container"></div>
+
+    <div id="pagination"></div>
+
+    <div id="custom-notification"
+         style="
+         display: none;
+         position: fixed;
+         top: 50%;
+         left: 50%;
+         transform: translateX(-50%);
+         padding: 20px 20px;
+         background-color: green;
+         color: white;
+         border-radius: 5px;
+         font-size: 1.1rem;"
+    ></div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
